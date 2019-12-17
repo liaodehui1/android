@@ -12,7 +12,6 @@ class Hot extends Component {
       movieIds: [],
       offset: 0
     }
-    console.log(this.props.navigation)
   }
   componentDidMount() {
     myFetch(api.movieOnInfoList)
