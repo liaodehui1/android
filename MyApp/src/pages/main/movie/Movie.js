@@ -13,9 +13,9 @@ class Movie extends Component {
       active: 0
     }
   }
-  changeActive = () => {
+  changeActive = (type) => {
     this.setState({
-      active: !this.state.active
+      active: type
     })
   }
   render() {
@@ -34,12 +34,12 @@ class Movie extends Component {
             </TouchableOpacity>
           </View>
           <View style={styles.tabs}>
-            <TouchableOpacity onPress={this.changeActive}
+            <TouchableOpacity onPress={() => {this.changeActive(0)}}
               style={styles.tab}
               activeOpacity={1}>
               <Text style={[styles.label, !this.state.active && styles.active]}>正在热映</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={this.changeActive}
+            <TouchableOpacity onPress={() => {this.changeActive(1)}}
               style={styles.tab}
               activeOpacity={1}>
               <Text style={[styles.label, this.state.active && styles.active]}>即将上映</Text>
