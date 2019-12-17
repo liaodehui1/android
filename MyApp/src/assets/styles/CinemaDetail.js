@@ -37,5 +37,30 @@ export default StyleSheet.create({
   locationIcon: {
     width: 19,
     height: 22,
+  },
+  tuanWrap: {
+    backgroundColor: '#f0f0f0'
+  },
+  tuanList: {
+    marginTop: 10,
+    paddingLeft: 15,
+    backgroundColor: '#fff'
+  },
+  tuanTitle: {
+    height: 45,
+    lineHeight: 45,
+    fontSize: 15,
+    color: '#333',
+    fontWeight: '700',
+    borderBottomWidth: 0.5,
+    borderStyle: 'solid',
+    borderColor: 'rgba(0,0,0,0.1)'
+  },
+  sectionTitle: {
+    lineHeight: 25,
+    lineHeight: 25,
+    fontSize: 14,
+    color: '#666',
+    paddingTop: 8
   }
 })
