@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text} from 'react-native'
+import {Text, Image} from 'react-native'
 import HeaderTitle from '../components/HeaderTitle'
 
 class MovieDetail extends Component {
