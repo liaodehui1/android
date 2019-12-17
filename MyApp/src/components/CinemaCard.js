@@ -33,7 +33,7 @@ class CinemaCard extends PureComponent {
     return (
       <View style={styles.container}>
         <View style={commonStyles.flexCenter}>
-          <Text style={styles.nm}>{strLimit(this.props.nm,16)}</Text>
+          <Text style={styles.nm}>{strLimit(this.props.nm)}</Text>
           {
             this.props.sellPrice ? (
               <Text style={styles.priceBox}>
