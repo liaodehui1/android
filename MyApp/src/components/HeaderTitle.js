@@ -13,6 +13,7 @@ class HeaderTitle extends Component {
         {
           this.props.hasBack ? (
             <TouchableOpacity onPress={this.back}
+              activeOpacity={1}
               style={styles.left}>
                 <Text style={styles.backArrow}></Text>
             </TouchableOpacity>
@@ -20,7 +21,7 @@ class HeaderTitle extends Component {
         }
         <View style={styles.textView}>
           <Text style={styles.text(this.props.hasBack)}>
-            {this.props.title && strLimit(this.props.title,16)}
+            {this.props.title && strLimit(this.props.title,13)}
           </Text>
         </View>
       </View>
