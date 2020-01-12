@@ -5,6 +5,7 @@ import { myFetch } from '../../../assets/js/util'
 import styles from '../../../assets/styles/Coming'
 import ExpectedMovieCard from "../../../components/ExpectedMovieCard"
 import MovieCard from '../../../components/MovieCard'
+import Loading from '../../../components/Loading'
 
 class Coming extends PureComponent {
   constructor(props) {
@@ -160,6 +161,7 @@ class Coming extends PureComponent {
             this.state.comingList ? (
               <SectionList
                 ListHeaderComponent={this.renderMostExpectedMovie()}
+                ListFooterComponent={<Loading></Loading>}
                 onEndReachedThreshold={0.1}
                 onEndReached={this.getMoreComingMovies}
                 style={styles.comingList}
