@@ -39,22 +39,33 @@ export default StyleSheet.create({
     height: 22,
   },
   tuanWrap: {
-    backgroundColor: '#f0f0f0'
-  },
-  tuanList: {
-    marginTop: 10,
-    paddingLeft: 15,
     backgroundColor: '#fff'
+  },
+  tuanTitleWrap: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 15,
+    borderBottomWidth: 0.5,
+    borderStyle: 'solid',
+    borderColor: 'rgba(0,0,0,0.1)'
   },
   tuanTitle: {
     height: 45,
     lineHeight: 45,
     fontSize: 15,
     color: '#333',
-    fontWeight: '700',
-    borderBottomWidth: 0.5,
-    borderStyle: 'solid',
-    borderColor: 'rgba(0,0,0,0.1)'
+    fontWeight: '700'
+  },
+  desc: {
+    color: '#666',
+    fontSize: 12,
+    lineHeight: 45
+  },
+  icon: {
+    width: 12
+  },
+  tuanList: {
+    paddingLeft: 15
   },
   sectionTitle: {
     lineHeight: 25,
