@@ -1,9 +1,10 @@
 import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer } from 'react-navigation'
 import Main from './src/pages/main/Main'
-import CinemaDetail from './src/pages/CinemaDetail'
+import CinemaDetail from './src/pages/cinema-detail/CinemaDetail'
 import MovieDetail from './src/pages/MovieDetail'
 import LightMap from './src/pages/LightMap'
+import Search from './src/pages/Search'
 
 const stack = createStackNavigator(
   {
@@ -15,6 +16,12 @@ const stack = createStackNavigator(
     },
     CinemaDetail: {
       screen: CinemaDetail,
+      navigationOptions: {
+        header: null
+      }
+    },
+    Search: {
+      screen: Search,
       navigationOptions: {
         header: null
       }
