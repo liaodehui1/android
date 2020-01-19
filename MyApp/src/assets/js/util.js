@@ -27,3 +27,13 @@ export function strLimit(content, limit = 15, ellipsis = '…') {
   if (content.length <= limit) return content;
   return content.substring(0, limit) + ellipsis
 }
+
+export function debounce(fn, delay = 500) {
+  let timer
+  return (...args) => {
+    if(timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn.apply(this, args)
+    }, delay)
+  }
+}
