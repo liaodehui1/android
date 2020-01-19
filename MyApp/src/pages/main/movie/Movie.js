@@ -5,6 +5,7 @@ import Container from './Container'
 import styles from '../../../assets/styles/Movie'
 import Hot from './Hot'
 import Coming from './Coming'
+import City from '../../../components/City'
 
 class Movie extends Component {
   constructor(props) {
@@ -23,16 +24,7 @@ class Movie extends Component {
       <>
         <HeaderTitle title={'猫眼电影'}></HeaderTitle>
         <View style={styles.TabBar}>
-          <View style={styles.cityEntry}>
-            <TouchableOpacity onPress={() => {
-                this.props.navigation.navigate('citylist')
-              }}
-              style={styles.cityBox}
-              activeOpacity={1}>
-              <Text style={styles.cityName}>南昌</Text>
-              <Text style={styles.cityEntryArrow}></Text>
-            </TouchableOpacity>
-          </View>
+          <City city="南昌"></City>
           <View style={styles.tabs}>
             <TouchableOpacity onPress={() => {this.changeActive(0)}}
               style={styles.tab}
