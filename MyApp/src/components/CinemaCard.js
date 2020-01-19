@@ -26,6 +26,8 @@ class CinemaCard extends PureComponent {
         return '小吃'
       case 'vipTag':
         return '折扣卡'
+      case 'sell': 
+        return '座'
     }
   }
 
@@ -50,7 +52,7 @@ class CinemaCard extends PureComponent {
         <View style={[commonStyles.flexCenter,styles.labelBox]}>
           {
             Object.keys(this.props.tag).map((tagName,index) => {
-                if(tagName === 'hallType' || tagName === 'hallTypeVOList' || tagName === 'sell') return
+                if(tagName === 'hallType' || tagName === 'hallTypeVOList') return
                 if(this.props.tag[tagName]) {
                   return (
                     <Text style={[styles.tag,styles.tagName(tagName)]}
@@ -69,7 +71,7 @@ class CinemaCard extends PureComponent {
           }
         </View>
         {
-          this.props.promotion.cardPromotionTag ? 
+          this.props.promotion && this.props.promotion.cardPromotionTag ? 
           (<View style={commonStyles.flexCenter}>
             <Text style={styles.cardIcon}>卡</Text>
             <Text style={styles.discountText}>{this.props.promotion.cardPromotionTag}</Text>
