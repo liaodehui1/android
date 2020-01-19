@@ -74,7 +74,8 @@ export default StyleSheet.create({
   },
   grade: {
     marginLeft: 3,
-    color: '#ffb400'
+    color: '#ffb400',
+    fontWeight: '700'
   },
   num: {
     fontSize: 16
