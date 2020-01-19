@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
-import {FlatList, View, TouchableOpacity} from 'react-native'
+import {FlatList, View, TouchableOpacity, Image, Text} from 'react-native'
 import api from '../../api/index'
 import {myFetch} from '../../assets/js/util'
 import HeaderTitle from '../../components/HeaderTitle'
 import CinemaCard from '../../components/CinemaCard'
 import Loaing from '../../components/Loading'
 import styles from '../../assets/styles/Cinema'
+import City from '../../components/City'
 
 class Cinema extends PureComponent {
   constructor(props){
@@ -49,7 +50,7 @@ class Cinema extends PureComponent {
     let cinemas = this.state.cinemas
     if(this.state.size < 20) {
       return this.setState({
-        loading: true
+        loading: false
       })
     }
     this.params.offset = (page - 1) * 20
@@ -58,7 +59,7 @@ class Cinema extends PureComponent {
         console.log(res)
         this.setState({
           loading: false,
-          cinemas:cinemas.concat(res.cinemas),
+          cinemas: cinemas.concat(res.cinemas),
           page: page + 1,
           size: res.cinemas.length
         })
@@ -69,6 +70,24 @@ class Cinema extends PureComponent {
     return (
       <>
         <HeaderTitle title={'影院'}></HeaderTitle>
+        <View style={styles.topbar}>
+          <City city="南昌"></City>
+          <TouchableOpacity style={styles.searchInput}
+            activeOpacity={1}
+            onPress={() => {
+              this.props.navigation.navigate(
+                'Search',
+                {
+                  searchtype: 'cinema',
+                  cityId: this.params.cityId
+                }
+              )
+            }}>
+            <Image style={styles.searchImg}
+              source={require('../../assets/images/search.png')} />
+            <Text style={styles.searchTip}>搜影院</Text>
+          </TouchableOpacity>
+        </View>
         <View style={styles.wrapper}>
           <FlatList
             onEndReachedThreshold={0.1}
