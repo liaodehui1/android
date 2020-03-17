@@ -9,10 +9,14 @@
 4. `npm start`开启后台
 5. 打开模拟器，使用`react-native run-android`运行项目
 ## 现阶段项目截图
-![图1](screenshot/movie1.png)
-![图2](screenshot/movie2.png)
-![图3](screenshot/cinema1.png)
-![图4](screenshot/cinema2.png)
-![图5](screenshot/cinema3.png)
-![图6](screenshot/search.png)
-![图7](screenshot/mine.png)
+<figure class="third">
+    <img src="screenshot/movie1.png">
+    <img src="screenshot/movie2.png">
+    <img src="screenshot/mine.png">
+</figure>
+<figure class="four">
+    <img src="screenshot/cinema1.png">
+    <img src="screenshot/cinema2.png">
+    <img src="screenshot/cinema3.png">
+    <img src="screenshot/search.png">
+</figure>
